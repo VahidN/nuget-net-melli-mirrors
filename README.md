@@ -120,7 +120,33 @@ set NuGetAudit=false
 
 (این دستور در همان ترمینال جاری اثر می‌کند. برای دائمی کردن آن، متغیر محیطی را در سیستم تنظیم کنید.)
 
+
 ---
+
+## 🔧 به‌روزرسانی ابزارهای دات‌نت (Dotnet Tools)
+
+ابزارهای خط فرمان دات‌نت (مانند `dotnet-ef`، `swashbuckle` و غیره) نیز برای نصب و به‌روزرسانی نیاز به دسترسی به منابع NuGet دارند. برای اطمینان از کارکرد در شرایط داخلی، از دستور زیر استفاده کنید:
+
+```bash
+dotnet tool restore --ignore-failed-sources --add-source %USERPROFILE%\.nuget\packages -v diag
+```
+
+> می‌توانید به جای `--add-source` چندین بار از این سوئیچ استفاده کنید یا منابع دیگر (مانند DevNeeds، Liara و ...) را نیز اضافه نمایید.
+
+---
+
+## 📌 یافتن بسته‌های منقضی‌شده (Outdated Packages)
+
+برای مشاهده پکیج‌هایی که نسخه جدیدتری از آن‌ها در میرورهای داخلی موجود است، از دستور `dotnet list package --outdated` همراه با تعیین صریح منابع استفاده کنید. مثال زیر از دو منبع DevNeeds و ParspackMirror استفاده می‌کند:
+
+```bash
+dotnet list package --outdated --source https://nuget.devneeds.ir/repository/nuget/index.json --source https://mirror.abrha.net/repository/nuget/index.json
+```
+
+> **توجه:** این دستور برخلاف `dotnet restore` از فایل `nuget.config` به طور کامل تبعیت نمی‌کند؛ بنابراین تعیین مستقیم `--source` ضروری است.
+
+---
+
 
 ## 🤝 نحوه مشارکت (Contribution)
 
