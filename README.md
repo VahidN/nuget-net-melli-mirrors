@@ -108,8 +108,14 @@ dotnet restore --ignore-failed-sources -v diag --source https://package-mirror.l
 
 قابلیت NuGet Audit در شرایط اینترنت داخلی ضرورتی ندارد و می‌توانید برای افزایش سرعت عملیات restore آن را غیرفعال کنید:
 
-```bash
+**در PowerShell:**
+```powershell
 $env:NuGetAudit="false"
+```
+
+**در Command Prompt (CMD):**
+```cmd
+set NuGetAudit=false
 ```
 
 (این دستور در همان ترمینال جاری اثر می‌کند. برای دائمی کردن آن، متغیر محیطی را در سیستم تنظیم کنید.)
