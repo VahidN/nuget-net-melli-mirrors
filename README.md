@@ -147,6 +147,12 @@ dotnet list package --outdated --source https://nuget.devneeds.ir/repository/nug
 
 ---
 
+## 🧰 آینه SDK (مرجع دانلود مستقیم)
+
+علاوه بر پکیج‌های NuGet، امکان دانلود مستقیم و به‌روز **ابزارهای توسعه (SDK)** نیز از طریق مخزن [DntSdkMirror](https://github.com/VahidN/DntSdkMirror) فراهم شده است. این مخزن هر روز به صورت خودکار تغییرات رسمی مایکروسافت را چک کرده و آخرین نسخه SDK را در خود ذخیره می‌کند.
+
+---
+
 
 ## 🤝 نحوه مشارکت (Contribution)
 
