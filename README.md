@@ -23,6 +23,7 @@
 | **ParspackMirror** | `https://mirror.abrha.net/repository/nuget/index.json` | [docs.parspack.com](https://docs.parspack.com/reference/mirror/nuget/) |
 | **RunFlare** | `https://mirror-nuget.runflare.com/v3/index.json` | [runflare.com/mirrors](https://runflare.com/mirrors/) |
 | **Liara** | `https://package-mirror.liara.ir/repository/nuget/index.json` | [docs.liara.ir/mirrors/nuget](https://docs.liara.ir/mirrors/nuget/) |
+| **Hamravesh** | `https://repo.hmirror.ir/nuget` | [hamravesh.com/blog](https://hamravesh.com/blog/container-registry-mirroring-and-caching/) |
 
 ---
 
@@ -40,6 +41,7 @@
     <add key="ParspackMirror" value="https://mirror.abrha.net/repository/nuget/index.json" />
     <add key="RunFlare" value="https://mirror-nuget.runflare.com/v3/index.json" />
     <add key="Liara" value="https://package-mirror.liara.ir/repository/nuget/index.json" />
+    <add key="Hamravesh" value="https://repo.hmirror.ir/nuget" />
   </packageSources>
 </configuration>
 ```
@@ -79,6 +81,11 @@ dotnet restore --ignore-failed-sources -v diag --source https://mirror-nuget.run
 ### 6. لیارا (Liara)
 ```bash
 dotnet restore --ignore-failed-sources -v diag --source https://package-mirror.liara.ir/repository/nuget/index.json
+```
+
+### 7. هم‌روش (Hamravesh)
+```bash
+dotnet restore --ignore-failed-sources -v diag --source https://repo.hmirror.ir/nuget
 ```
 
 > 💡 **یک دستور برای همه منابع** (با استفاده از فایل `nuget.config` بالا):
