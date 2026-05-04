@@ -135,6 +135,23 @@ dotnet tool restore --ignore-failed-sources --add-source %USERPROFILE%\.nuget\pa
 
 ---
 
+## ➕ اضافه کردن یک بسته جدید (Add Package)
+
+برای نصب و اضافه کردن یک بسته NuGet به پروژه، می‌توانید از کش محلی یا یکی از آینه‌های داخلی استفاده کنید:
+
+**استفاده از کش محلی:**
+```bash
+dotnet add package MyPackageName --source %USERPROFILE%\.nuget\packages
+```
+
+**استفاده از یک آینه داخلی (مثال با DevNeeds):**
+```bash
+dotnet add package MyPackageName --source https://nuget.devneeds.ir/repository/nuget/index.json
+```
+
+---
+
+
 ## 📌 یافتن بسته‌های منقضی‌شده (Outdated Packages)
 
 برای مشاهده پکیج‌هایی که نسخه جدیدتری از آن‌ها در میرورهای داخلی موجود است، از دستور `dotnet list package --outdated` همراه با تعیین صریح منابع استفاده کنید. مثال زیر از دو منبع DevNeeds و ParspackMirror استفاده می‌کند:
