@@ -19,7 +19,7 @@
 | نام منبع | آدرس (URL) | مرجع |
 | -------- | ---------- | ----- |
 | **ChabokMirror** | `https://mirror2.chabokan.net/nuget/v3/index.json` | [iran.chabokan.net](https://iran.chabokan.net/) |
-| **DevNeeds** | `https://nuget.devneeds.ir/index.json` | [devneeds.ir](https://devneeds.ir/) |
+| **DevNeeds** | `https://nuget.devneeds.ir/repository/nuget/index.json` | [devneeds.ir](https://devneeds.ir/) |
 | **ParspackMirror** | `https://mirror.abrha.net/repository/nuget/index.json` | [docs.parspack.com](https://docs.parspack.com/reference/mirror/nuget/) |
 | **RunFlare** | `https://mirror-nuget.runflare.com/v3/index.json` | [runflare.com/mirrors](https://runflare.com/mirrors/) |
 | **Liara** | `https://package-mirror.liara.ir/repository/nuget/index.json` | [docs.liara.ir/mirrors/nuget](https://docs.liara.ir/mirrors/nuget/) |
@@ -39,7 +39,7 @@
   <packageSources>
     <add key="LocalPackages" value="%USERPROFILE%\.nuget\packages" />
     <add key="ChabokMirror" value="https://mirror2.chabokan.net/nuget/v3/index.json" />
-    <add key="DevNeeds" value="https://nuget.devneeds.ir/index.json" />
+    <add key="DevNeeds" value="https://nuget.devneeds.ir/repository/nuget/index.json" />
     <add key="ParspackMirror" value="https://mirror.abrha.net/repository/nuget/index.json" />
     <add key="RunFlare" value="https://mirror-nuget.runflare.com/v3/index.json" />
     <add key="Liara" value="https://package-mirror.liara.ir/repository/nuget/index.json" />
@@ -69,7 +69,7 @@ dotnet restore --ignore-failed-sources -v diag --source https://mirror2.chabokan
 
 ### 3. DevNeeds
 ```bash
-dotnet restore --ignore-failed-sources -v diag --source https://nuget.devneeds.ir/index.json
+dotnet restore --ignore-failed-sources -v diag --source https://nuget.devneeds.ir/repository/nuget/index.json
 ```
 
 ### 4. پارس پک (ParspackMirror)
@@ -167,7 +167,7 @@ dotnet add package MyPackageName --source %USERPROFILE%\.nuget\packages
 
 **استفاده از یک آینه داخلی (مثال با DevNeeds):**
 ```bash
-dotnet add package MyPackageName --source https://nuget.devneeds.ir/index.json
+dotnet add package MyPackageName --source https://nuget.devneeds.ir/repository/nuget/index.json
 ```
 
 ---
@@ -178,7 +178,7 @@ dotnet add package MyPackageName --source https://nuget.devneeds.ir/index.json
 برای مشاهده پکیج‌هایی که نسخه جدیدتری از آن‌ها در میرورهای داخلی موجود است، از دستور `dotnet list package --outdated` همراه با تعیین صریح منابع استفاده کنید. مثال زیر از دو منبع DevNeeds و ParspackMirror استفاده می‌کند:
 
 ```bash
-dotnet list package --outdated --source https://nuget.devneeds.ir/index.json --source https://mirror.abrha.net/repository/nuget/index.json
+dotnet list package --outdated --source https://nuget.devneeds.ir/repository/nuget/index.json --source https://mirror.abrha.net/repository/nuget/index.json
 ```
 
 > **توجه:** این دستور برخلاف `dotnet restore` از فایل `nuget.config` به طور کامل تبعیت نمی‌کند؛ بنابراین تعیین مستقیم `--source` ضروری است.
