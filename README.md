@@ -49,6 +49,7 @@
   </packageSources>
 </configuration>
 ```
+
 💡 اگر از یکی از توزیع‌های لینوکس استفاده می‌کنید، سطر ذيل را از فایل فوق پاک کنید، يا حتی می‌توانید مقدار `%USERPROFILE%` را به `%HOME%` تغییر دهید:
 
 ```xml
@@ -58,6 +59,10 @@
 ```xml
 <!-- Use %HOME% even on Linux to dynamically fetch your home folder -->
 <add key="LocalPackages" value="%HOME%/.nuget/packages" />
+```
+و يا:
+```xml
+<add key="LocalPackages" value="~/.nuget/packages/" />
 ```
 و مابقی را در ریشه‌ی پروژه و یا در مسیر زیر ذخیره کنید:
 
