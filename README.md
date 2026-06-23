@@ -49,14 +49,15 @@
   </packageSources>
 </configuration>
 ```
-💡 اگر از یکی از توزیع‌های لینوکس استفاده می‌کنید، سطر ذيل را از فایل فوق پاک کنید، يا حتی می‌توانید مقدار `%USERPROFILE%` را به `$HOME` تغییر دهید:
+💡 اگر از یکی از توزیع‌های لینوکس استفاده می‌کنید، سطر ذيل را از فایل فوق پاک کنید، يا حتی می‌توانید مقدار `%USERPROFILE%` را به `%HOME%` تغییر دهید:
 
 ```xml
 <add key="LocalPackages" value="%USERPROFILE%\.nuget\packages" />
 ```
 مانند:
 ```xml
-<add key="LocalPackages" value="$HOME/.nuget/packages" />
+<!-- Use %HOME% even on Linux to dynamically fetch your home folder -->
+<add key="LocalPackages" value="%HOME%/.nuget/packages" />
 ```
 و مابقی را در ریشه‌ی پروژه و یا در مسیر زیر ذخیره کنید:
 
@@ -73,8 +74,13 @@
 (پرچم `--ignore-failed-sources` خطاهای مربوط به عدم دسترسی به یک منبع را نادیده می‌گیرد و `-v diag` خروجی جزیی نشان می‌دهد.)
 
 ### 1. کش محلی (Local Cache)
+در ويندوز:
 ```bash
 dotnet restore --ignore-failed-sources -v diag --source %USERPROFILE%\.nuget\packages
+```
+و يا برای لينوكس:
+```bash
+dotnet restore --ignore-failed-sources -v diag --source ~/.nuget/packages/
 ```
 
 ### 2. چابکان (ChabokMirror)
