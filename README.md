@@ -49,6 +49,14 @@
   </packageSources>
 </configuration>
 ```
+اگر از یکی از توزیع های لینوکس استفاده میکنید این خط را از فایل خود پاک کنید و باقی را در ریشه پروژه و یا در مسیر زیر ذخیره کنید:
+
+`HOME/.nuget/NuGet$`
+```xml
+
+    <add key="LocalPackages" value="%USERPROFILE%\.nuget\packages" />
+
+```
 
 ---
 
