@@ -60,7 +60,9 @@
 ```
 و مابقی را در ریشه‌ی پروژه و یا در مسیر زیر ذخیره کنید:
 
-`HOME/.nuget/NuGet$`
+```bash
+~/.nuget/NuGet/NuGet.Config
+```
 
 
 ---
