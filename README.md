@@ -49,22 +49,10 @@
   </packageSources>
 </configuration>
 ```
-اگر از یکی از توزیع های لینوکس استفاده میکنید این قطعه را در ریشه پروژه خود ذخیره کنید:
-
+اگر از یکی از توزیع های لینوکس استفاده میکنید این خط را از فایل خود پاک کنید و باقی را در ریشه پروژه خود ذخیره کنید:
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <packageSources>
-    <add key="ChabokMirror" value="https://mirror2.chabokan.net/nuget/v3/index.json" />
-    <add key="DevNeeds" value="https://nuget.devneeds.ir/repository/nuget/index.json" />
-    <add key="ParspackMirror" value="https://mirror.abrha.net/repository/nuget/index.json" />
-    <add key="RunFlare" value="https://mirror-nuget.runflare.com/v3/index.json" />
-    <add key="Liara" value="https://package-mirror.liara.ir/repository/nuget/index.json" />
-    <add key="Hamravesh" value="https://repo.hmirror.ir/nuget" />
-    <add key="IranServer" value="https://nuget.iranserver.com/repository/nuget/index.json" />
-    <add key="NugetIran" value="https://repo.nugetiran.ir/repository/nuget/index.json" />
-  </packageSources>
-</configuration>
+
+    <add key="LocalPackages" value="%USERPROFILE%\.nuget\packages" />
 
 ```
 
