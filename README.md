@@ -54,6 +54,10 @@
 ```xml
 <add key="LocalPackages" value="%USERPROFILE%\.nuget\packages" />
 ```
+مانند:
+```xml
+<add key="LocalPackages" value="$HOME/.nuget/packages" />
+```
 و مابقی را در ریشه‌ی پروژه و یا در مسیر زیر ذخیره کنید:
 
 `HOME/.nuget/NuGet$`
