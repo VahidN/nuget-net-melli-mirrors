@@ -26,7 +26,7 @@
 | **Hamravesh** | `https://repo.hmirror.ir/nuget` | [hamravesh.com/blog](https://hamravesh.com/blog/container-registry-mirroring-and-caching/) |
 | **IranServer** | `https://nuget.iranserver.com/repository/nuget/index.json` | [mirror.iranserver.com](https://mirror.iranserver.com/#nuget) |
 | **NugetIran** | `https://repo.nugetiran.ir/repository/nuget/index.json` | [nugetiran.ir](https://nugetiran.ir/) |
-| **NugetIran** | `https://mirror.rasanegaar.com/nuget/` | [rasanegaar.com](https://rasanegaar.com/) |
+| **RasaNegaar** | `https://mirror.rasanegaar.com/nuget/` | [rasanegaar.com](https://rasanegaar.com/) |
 
 ---
 
