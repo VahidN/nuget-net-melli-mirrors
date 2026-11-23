@@ -26,6 +26,7 @@
 | **Hamravesh** | `https://repo.hmirror.ir/nuget` | [hamravesh.com/blog](https://hamravesh.com/blog/container-registry-mirroring-and-caching/) |
 | **IranServer** | `https://nuget.iranserver.com/repository/nuget/index.json` | [mirror.iranserver.com](https://mirror.iranserver.com/#nuget) |
 | **NugetIran** | `https://repo.nugetiran.ir/repository/nuget/index.json` | [nugetiran.ir](https://nugetiran.ir/) |
+| **NugetIran** | `https://mirror.rasanegaar.com/nuget/` | [rasanegaar.com](https://rasanegaar.com/) |
 
 ---
 
@@ -46,6 +47,7 @@
     <add key="Hamravesh" value="https://repo.hmirror.ir/nuget" />
     <add key="IranServer" value="https://nuget.iranserver.com/repository/nuget/index.json" />
     <add key="NugetIran" value="https://repo.nugetiran.ir/repository/nuget/index.json" />
+    <add key="RasaNegaar" value="https://mirror.rasanegaar.com/nuget/" />
   </packageSources>
 </configuration>
 ```
@@ -126,6 +128,11 @@ dotnet restore --ignore-failed-sources -v diag --source https://nuget.iranserver
 ### 9. ایران نيوگت (NugetIran)
 ```bash
 dotnet restore --ignore-failed-sources -v diag --source https://repo.nugetiran.ir/repository/nuget/index.json
+```
+
+### 10. رسانگار (RasaNegaar)
+```bash
+dotnet restore --ignore-failed-sources -v diag --source https://mirror.rasanegaar.com/nuget/
 ```
 
 > 💡 **یک دستور برای همه منابع** (با استفاده از فایل `nuget.config` بالا):
